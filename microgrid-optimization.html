@@ -39,29 +39,35 @@
 
     <section>
       <h3>Tradeoff and Pareto Frontier</h3>
-      <p>Instead of a single “best” answer, the analysis produces a Pareto set of feasible designs that expose practical tradeoffs between competing objectives.</p>
+      <p>The genetic algorithm achieves lower-emission solutions at comparable cost and is more robust in the non-smooth case where gradient-based methods struggle.</p>
       <figure>
-        <img class="case-image" src="/assets/microgrid/pareto-front.png" alt="Pareto frontier comparing cost, reliability, and emissions for microgrid designs">
-        <figcaption>Pareto frontier of candidate designs across key planning objectives.</figcaption>
+        <img class="case-image" src="/assets/microgrid/Algorithm Pareto Fronts on Nonsmoothed.png" alt="Cost versus emissions Pareto fronts comparing grid search and genetic algorithm on smooth and non-smooth microgrid simulations">
+        <figcaption>Across smooth and non-smooth simulations, the genetic algorithm reaches lower-emission Pareto solutions at similar cost and remains stable when search conditions are non-smooth.</figcaption>
       </figure>
     </section>
 
     <section>
       <h3>Methods Compared</h3>
-      <p>Weighted Sum, Epsilon Constraint, NSGA-II, MOEA/D, and Grid Search were benchmarked for solution quality, runtime, and ability to cover the full tradeoff surface.</p>
+      <p>Weighted Sum, Epsilon Constraint, NSGA-II, MOEA/D, and Grid Search were compared using Pareto set size, average cost, average emissions, average unmet load, spread, coverage, IGD, and hypervolume. Across these convergence, diversity, and reliability metrics, the genetic algorithm performed best overall.</p>
       <figure>
-        <img class="case-image" src="/assets/microgrid/runtime-table.png" alt="Runtime comparison table across optimization methods">
-        <figcaption>Runtime and convergence comparison for all optimization methods.</figcaption>
+        <img class="case-image" src="/assets/microgrid/comparison_metrics_heatmap.png" alt="Heatmap of algorithm metrics including Pareto set size, cost, emissions, unmet load, spread, coverage, IGD, and hypervolume">
+        <figcaption>Heatmap summarizing algorithm performance across quality and diversity measures, highlighting overall strengths of the genetic algorithm.</figcaption>
+      </figure>
+      <h4>Runtime Comparison</h4>
+      <p>The runtime chart shows that GA and MOEA/D deliver competitive compute performance while maintaining strong solution quality. Both methods are substantially more efficient than exhaustive or grid-based search when exploring larger design spaces. This makes them practical for repeated scenario studies and sensitivity runs.</p>
+      <figure>
+        <img class="case-image" src="/assets/microgrid/runtimes.png" alt="Bar chart comparing optimization runtimes across grid search, multistart, GA, and MOEA-D methods">
+        <figcaption>Runtime differences by method show GA and MOEA/D as efficient alternatives to exhaustive and multistart approaches.</figcaption>
       </figure>
     </section>
 
     <section>
       <h3>Key Findings</h3>
-      <p>Evolutionary methods captured broader tradeoff diversity, while constrained scalarization gave faster targeted runs for specific design priorities.</p>
-      <figure>
-        <img class="case-image" src="/assets/microgrid/diesel-threshold.png" alt="Diesel generator threshold behavior across demand scenarios">
-        <figcaption>Observed diesel usage threshold as reliability requirements increase.</figcaption>
-      </figure>
+      <ul>
+        <li>Algorithm selection materially impacts solution quality in non-smooth systems.</li>
+        <li>Smoothing changes the feasible region and can distort tradeoffs.</li>
+        <li>The genetic algorithm provides strong Pareto coverage with low runtime and robust convergence.</li>
+      </ul>
     </section>
 
     <section>
