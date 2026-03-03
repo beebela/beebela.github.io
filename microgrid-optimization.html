@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Multi-Objective Microgrid Design Optimization | MayBee Better</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>May Beebe</h1>
+      <p class="tagline">Work in progress . . . </p>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/work.html">Work</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Multi-Objective Microgrid Design Optimization</h2>
+      <p>This case study shows how multi-objective search can reveal resilient, lower-emission system designs with transparent cost tradeoffs.</p>
+    </section>
+
+    <section>
+      <h3>The Problem</h3>
+      <p>Microgrid design decisions must balance competing goals, including cost, reliability, and emissions, under uncertain demand and resource availability.</p>
+    </section>
+
+    <section>
+      <h3>System Model and Constraints</h3>
+      <p>The model evaluates generation and storage sizing with operational constraints such as load balance, capacity limits, and reserve coverage over representative time periods.</p>
+    </section>
+
+    <section>
+      <h3>Tradeoff and Pareto Frontier</h3>
+      <p>Instead of a single “best” answer, the analysis produces a Pareto set of feasible designs that expose practical tradeoffs between competing objectives.</p>
+      <figure>
+        <img class="case-image" src="/assets/microgrid/pareto-front.png" alt="Pareto frontier comparing cost, reliability, and emissions for microgrid designs">
+        <figcaption>Pareto frontier of candidate designs across key planning objectives.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Methods Compared</h3>
+      <p>Weighted Sum, Epsilon Constraint, NSGA-II, MOEA/D, and Grid Search were benchmarked for solution quality, runtime, and ability to cover the full tradeoff surface.</p>
+      <figure>
+        <img class="case-image" src="/assets/microgrid/runtime-table.png" alt="Runtime comparison table across optimization methods">
+        <figcaption>Runtime and convergence comparison for all optimization methods.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Key Findings</h3>
+      <p>Evolutionary methods captured broader tradeoff diversity, while constrained scalarization gave faster targeted runs for specific design priorities.</p>
+      <figure>
+        <img class="case-image" src="/assets/microgrid/diesel-threshold.png" alt="Diesel generator threshold behavior across demand scenarios">
+        <figcaption>Observed diesel usage threshold as reliability requirements increase.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Tools and Stack</h3>
+      <p>Python optimization workflows, scenario simulation scripts, and lightweight plotting were used to run experiments and summarize decision-ready results.</p>
+    </section>
+
+    <section>
+      <h3>Next Improvements</h3>
+      <p>Future work includes uncertainty-aware planning, richer battery degradation modeling, and automated sensitivity dashboards for stakeholder review.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2026 MayBee Better LLC</div>
+  </footer>
+</body>
+</html>

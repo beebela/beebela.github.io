@@ -10,6 +10,16 @@ nav a { text-decoration:none; color:var(--text); font-weight:500; }
 .tagline{ margin:0; color:#666; }
 .hero{ background:linear-gradient(180deg, rgba(11,116,222,0.05), transparent); padding:2rem; border-radius:8px; }
 .site-footer{ text-align:center; padding:1rem 0; color:#666; font-size:0.9rem; margin-top:2rem; }
+.projects-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1rem; margin-top:1rem; }
+.project-card { background:#fff; border:1px solid #e6e6e6; border-radius:8px; padding:1rem; }
+.project-card h3 { margin-top:0; margin-bottom:0.5rem; }
+.project-card p { margin-top:0; }
+.project-card a { color:var(--text); text-decoration:none; }
+.tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.75rem; }
+.tag { display:inline-block; padding:0.2rem 0.55rem; border:1px solid #d8d8d8; border-radius:999px; font-size:0.85rem; color:#444; background:#fafafa; }
+figure { margin:1.25rem 0; }
+.case-image { display:block; width:100%; max-width:100%; height:auto; border:1px solid #e6e6e6; border-radius:8px; background:#fff; }
+figcaption { margin-top:0.5rem; color:#666; font-size:0.9rem; }
 
 @media (max-width: 600px) {
   .container { padding: 1.25rem; }
