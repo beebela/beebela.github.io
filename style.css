@@ -66,30 +66,37 @@ figcaption { margin-top:0.5rem; color:#666; font-size:0.9rem; }
 
 .home {
   width: 100%;
+  --home-content-max: 1280px;
+  --home-gutter: clamp(1rem, 4vw, 4rem);
 }
 
 .hero {
-  padding: 96px 10% 40px 10%;
-  max-width: 1100px;
+  padding: 96px var(--home-gutter) 40px;
+  max-width: var(--home-content-max);
   margin: 0 auto;
+  text-align: center;
 }
 
 .hero h1 {
   font-size: 52px;
   line-height: 1.05;
-  margin: 0 0 18px 0;
+  margin: 0 auto 18px;
   letter-spacing: -0.02em;
+  max-width: 70ch;
+  white-space: nowrap;
 }
 
 .hero p {
-  max-width: 68ch;
+  max-width: 70ch;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .tile-grid {
   width: 100%;
-  padding: 24px 10% 96px 10%;
+  max-width: var(--home-content-max);
+  margin: 0 auto;
+  padding: 24px var(--home-gutter) 96px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 24px;
@@ -142,15 +149,16 @@ figcaption { margin-top:0.5rem; color:#666; font-size:0.9rem; }
 
 @media (max-width: 900px) {
   .hero {
-    padding: 72px 7% 28px 7%;
+    padding: 72px var(--home-gutter) 28px;
   }
 
   .hero h1 {
     font-size: 40px;
+    white-space: normal;
   }
 
   .tile-grid {
-    padding: 18px 7% 72px 7%;
+    padding: 18px var(--home-gutter) 72px;
   }
 
   .tile {
